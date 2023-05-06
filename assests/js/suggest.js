@@ -118,7 +118,6 @@ function handleStickeyHeader() {
             !(seeMoreY + seeMoreH <= headerH + copyHeaderY) &&
             seeMoreY >= mHeaderH + (headerH - seeMoreH)
         ) {
-            console.log(seeMoreY + seeMoreH, headerH + copyHeaderY);
             copyHeader.style.display = "none";
             copyHeader.style.position = null;
         }

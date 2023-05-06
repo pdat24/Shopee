@@ -8,8 +8,12 @@ import "./suggest.js";
 import "./footer.js";
 
 // show proposes on header
-function handleProposes() {
+async function handleProposes() {
     const searchBar = document.getElementById("search-bar");
+    let data = null;
+    await fetchData("http://localhost:3000/header-propose").then(
+        (resp) => (data = resp)
+    );
     const proposeWrapper = document.getElementById(
         "header__bottom-propose-wrapper"
     );
@@ -24,15 +28,22 @@ function handleProposes() {
     }
     const proposesList = document.createElement("ul");
     proposesList.id = "proposes";
-    proposesList.innerHTML = `
-        <li class="propose">Laptop giá sinh viên</li>
-        <li class="propose">Nước hoa nam</li>
-        <li class="propose">Săn voucher giảm giá shopee</li>
-        <li class="propose">Sơ mi nữ</li>
-    `;
-    searchBar.onfocus = () => {
+    searchBar.oninput = (e) => {
+        const htmlList = [];
+        for (const elem of data) {
+            if (elem.startsWith(e.target.value.toLowerCase())) {
+                htmlList.push(`<li class="propose">${elem}</li>`);
+                if (htmlList.length >= 5) break;
+            }
+        }
+        if (htmlList.length > 0) {
+            proposesList.innerHTML = htmlList.join("");
+            handleClickOnProposes();
+        } else {
+            proposesList.innerHTML =
+                "<li class='propose'>không tìm thấy sản phẩm</li>";
+        }
         proposeWrapper.append(proposesList);
-        handleClickOnProposes();
     };
     searchBar.onblur = () => {
         setTimeout(() => proposeWrapper.removeChild(proposesList), 200);

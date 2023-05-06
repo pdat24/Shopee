@@ -11,6 +11,23 @@
         "./assests/imgs/body1/shop-mail.jpeg",
         "./assests/imgs/body1/vn-50009109-bb89b711aed66dbda923400130656052_xxhdpi.jpeg"
     ],
+    "header-propose": [
+        "laptop giá sinh viên", 
+        "tai nghe", 
+        "sơ mi nữ", 
+        "iphone 14", 
+        "ốp lưng điện thoai",
+        "quạt hơi nước",
+        "nước hoa nam",
+        "áo polo tay ngắn",
+        "giày adidas",
+        "nồi cơm điện",
+        "đèn ngủ",
+        "sữa rửa mặt simple",
+        "vòng tay cung hoàng đạo",
+        "bình giữ nhiệt",
+        "cá cảnh"
+    ],
     "category-items": [
         [  
             {
