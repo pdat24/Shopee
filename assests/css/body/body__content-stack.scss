@@ -1,0 +1,25 @@
+// content stack
+#content__stack {
+    max-width: $w-1200;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:  $mt-20;
+    position: relative;
+}
+#content__stack img:first-child {
+    width: 100%;
+}
+#content__stack-links {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.content__stack-link {
+    @include no-drag();
+    display: inline-block;
+    text-decoration: none;
+    flex: 1;
+}

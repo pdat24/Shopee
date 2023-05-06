@@ -1,0 +1,108 @@
+#footer {
+    border-top: 0.3rem solid var(--red-color);
+    background-color: var(--white-color);
+    font-size: 1.2rem;
+}
+#footer li {
+    list-style-type: none;
+}
+#footer__body {
+    max-width: $w-1200;
+    margin: auto;
+    margin-top: 6rem;
+}
+#footer__body > h4,
+#footer__body > h5 {
+    font-weight: 600;
+}
+#footer__body > p {
+    margin-top: 1rem;
+}
+#footer__body hr:last-child {
+    margin-top: 6rem;
+    margin-bottom: 0;
+}
+#footer__category {
+    @extend #footer__body;
+}
+#footer__category-body {
+    display: flex;
+}
+#footer__support {
+    background-color: #fbfbfb;
+    overflow-y: auto;
+}
+.footer__support-row {
+    flex: 1;
+}
+#footer__support-payment,
+#footer__support-shipping {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+#footer__support-body {
+    @extend #footer__category-body;
+    @extend #footer__body;
+    border-bottom: 1px solid #ccc;
+    margin-top: 0;
+}
+.footer__support-img {
+    background-color: var(--white-color);
+    padding: 0.4rem;
+    box-shadow: 0 1px 1px rgba(0,0,0,.2);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.footer__socialIcon {
+    width: 1.6rem;
+}
+.footer__support-title {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+}
+#footer__QR {
+    background-color: #fff;
+    padding: 0.4rem;
+    box-shadow: 0 1px 1px rgba(0,0,0,.2);
+    margin-right: 2rem;
+}
+#footer__download {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer__platform {
+    background-color: var(--white-color);
+    padding: 0.3rem;
+    box-shadow: 0 1px 1px rgba(0,0,0,.2);
+}
+#footer__countries {
+    @extend #footer__body;
+    margin-top: 3.6rem;
+    margin-bottom: 3.6rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    opacity: 75%;
+}
+.footer__country {
+    padding: 0 0.5rem;
+    border-right: 1px solid rgba(0,0,0,.2);
+}
+#footer__bottom {
+    background-color: #f5f5f5;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+#footer__bottom-info {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    opacity: 75%;
+}
+#footer__bottom-info li {
+    border-right: 1px solid rgba(0,0,0,.2);
+    padding: 0 2rem;
+}

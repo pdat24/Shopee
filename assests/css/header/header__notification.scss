@@ -1,0 +1,20 @@
+// Notification
+#UI-lang {
+    @include float-block-in-header();
+    @include hide();
+    color: var(--black-color);
+    width: 20rem;
+    transform: translateX(-50%)
+}
+#UI-lang > p {
+    font-size: 1.4rem;
+    padding: 1.2rem 0.8rem;
+    margin: 0;
+    cursor: pointer;
+}
+#UI-lang > p:hover {
+    color: #f53d2d;
+}
+#lang-button:hover #UI-lang {
+    @include show();
+}

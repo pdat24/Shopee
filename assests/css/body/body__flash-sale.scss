@@ -1,0 +1,144 @@
+/* flash sale */
+#flash-sale {
+    position: relative;
+    @include body-container();
+    display: flex;
+    flex-direction: column
+}
+#flash-sale__header {
+    @include body-header();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#flash-sale__header-title-text {
+    width: 13rem;
+    height: 2.8rem;
+    background-image: url('../imgs/temp/fb1088de81e42c4e538967ec12cb5caa.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    margin-right: 2rem;
+}
+#flash-sale__time {
+    display: flex;
+    gap: 0.6rem;
+    font-size: 1.4rem;
+}
+#flash-sale__time [class^='time'] {
+    color: var(--white-color);
+    background-color: #000;
+    padding: 0 0.2rem;
+    border-radius: 0.3rem;
+    font-weight: bold;
+}
+#flash-sale__header-link {
+    @include body-header-seeAll();
+}
+#flash-sale__body {
+    overflow: hidden;
+}
+#flash-sale__wrapper {
+    @include wrapper();
+}
+.flash-sale__body-item {
+    width: calc(120rem / 6);
+    padding: 0 1.6rem;
+    float: left;
+}
+.flash-sale__item-body {
+    height: 18rem;
+    position: relative;
+}
+.flash-sale__item-body-img {
+    @include bg-img('../imgs/temp/52f316f483fde80eca825242421ff94f_tn.png');
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+.flash-sale__item-body-mall {
+    background-color: #d0011b;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    padding: 1rem 1.4rem;
+    z-index: 4;
+    margin-left: -0.28rem;
+    border-radius: 0.2rem;
+}
+.flash-sale__item-body-mall-text {
+    @include bg-img('../imgs/temp/1ea7594a0e6dbc0cdb8640b83a1079bb.png');
+    position: absolute;
+    top: 0.5rem;
+    left: 0.4rem;
+    right: 0.4rem;
+    bottom: 0.4rem;
+}
+.flash-sale__item-body-bg {
+    @include bg-img('../imgs/temp/vn-50009109-9f7f3775af623528d5a73c73f2177b77_tn.png');
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 8;
+    top: 0;
+}
+.flash-sale__item-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 0;
+    gap: 0.8rem;
+}
+.flash-sale__item-footer-cost {
+    color: #ee4d2d;
+    font-size: 1.6rem;
+}
+.flash-sale__item-footer-bar {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.flash-sale__item-footer-img {
+    @include bg-img('../imgs/temp/ac7f81d9ee062223753413ec98497a86.png');
+    position: absolute;
+    width: 80%;
+    height: 1.6rem;
+    border-radius: 2rem;
+    z-index: 2;
+}
+.flash-sale__item-footer-fire {
+    @include bg-img('../imgs/temp/fire.png');
+    position: absolute;
+    z-index: 4;
+    width: 2rem;
+    height: 2rem;
+    left: 0.2rem;
+    top: -0.6rem;
+}
+.flash-sale__item-footer-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #fff, $alpha: 0.4);
+    z-index: 4;
+    width: 77%;
+    height: 1.6rem;
+}
+.flash-sale__item-footer-text {
+    color: var(--white-color);
+    z-index: 8;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+// Don't forget set it's parent to relative
+#flash-sale__forward {
+    @include forward-btn();
+}
+#flash-sale__backward {
+    @include backward-btn();
+}

@@ -1,0 +1,16 @@
+/* Header */
+#header {
+    background: linear-gradient(-180deg, #f53d2d, #f63);
+    padding: 0 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+}
+@import './header__top.scss';
+@import './header__search.scss';
+@import './header__QRcode.scss';
+@import './header__notification.scss';
+@import './header__bottom.scss';
+@import './header__cart.scss';

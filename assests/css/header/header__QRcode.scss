@@ -1,0 +1,21 @@
+// QR code
+#download-code {
+    @include float-block-in-header();
+    @include hide();
+    width: 20rem;
+}
+#download-code > img:first-child {
+    width: 100%;
+    border-radius: 0.4rem;
+}
+#app-on-mobile {
+    display: flex;
+    padding: 0 0.8rem;
+}
+#app-on-mobile img {
+    width: 50%;
+    padding-bottom: 0.8rem;
+}
+#open-QR:hover #download-code {
+    @include show();
+}
