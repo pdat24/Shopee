@@ -1,4 +1,4 @@
 # Shopee
 
--   Run "npm i" to install json-server
--   Run command "npm start" to fake API
+-   "npm i" to install json-server
+-   "npm start" to fake API
