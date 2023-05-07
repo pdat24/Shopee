@@ -5,7 +5,6 @@
 }
 #header__bottom-logo {
     display: flex;
-    align-items: flex-end;
     gap: 1rem;
     height: 4rem;
     cursor: pointer;
@@ -15,9 +14,11 @@
 }
 #header__bottom-logo i:first-child {
     font-size: 4.4rem;
+    margin-top: -1rem;
 }
 #header__bottom-logo span:last-child {
     font-weight: 400;
+    align-self: flex-end;
 }
 #header__bottom-wrapper {
     display: flex;

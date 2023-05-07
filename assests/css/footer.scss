@@ -28,6 +28,11 @@
 #footer__category-body {
     display: flex;
 }
+.footer__category-row {
+    flex: 1;
+    padding: 0.5rem;
+    line-height: 2rem;
+}
 #footer__support {
     background-color: #fbfbfb;
     overflow-y: auto;

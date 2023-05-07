@@ -10,10 +10,7 @@ import "./footer.js";
 // show proposes on header
 async function handleProposes() {
     const searchBar = document.getElementById("search-bar");
-    let data = null;
-    await fetchData("http://localhost:3000/header-propose").then(
-        (resp) => (data = resp)
-    );
+    let data = await fetchData("http://localhost:3000/header-propose");
     const proposeWrapper = document.getElementById(
         "header__bottom-propose-wrapper"
     );
