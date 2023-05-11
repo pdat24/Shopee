@@ -1,6 +1,8 @@
 # Web shopee on desktop
 
-# To start project:
-1.   "npm i" to install json-server (make sure you installed nodejs).
-2.   "npm start" to fake API (make sure port 3000 is not using).
-3.   open file index.html on vscode or any code editor that support liveserver to run project.
+# To start project: 
+
+- Open terminal in which the project cloned and run commands:
+1.   "npm i": Install json-server (make sure you installed nodejs).
+2.   "npm start": Fake API (make sure port 3000 is not using).
+Finally, Open file index.html on vscode or any code editor that support liveserver to run project.
