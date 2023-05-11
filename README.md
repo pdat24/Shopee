@@ -1,4 +1,4 @@
-# Shopee
+# Web shopee on desktop
 
 # To start project:
 1.   "npm i" to install json-server (make sure you installed nodejs).
