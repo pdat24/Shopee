@@ -1,4 +1,4 @@
-# Web shopee on desktop
+# Shopee web version on desktop
 
 ## To start project: 
 ### Open terminal in which the project cloned and run these commands:
