@@ -1,0 +1,61 @@
+#outlet {
+    @include body-container();
+}
+#outlet__header {
+    @include bg-img(
+        "https://res.cloudinary.com/dh8bwlxbr/image/upload/v1688182260/Shopee%20Project/vn-50009109-0b8dd9b3276e8f64a18eade9dba5a9f2_vmffyx.jpg"
+    );
+    @include body-header();
+    background-size: cover;
+}
+#outlet__body {
+    padding: 0 2rem 2rem;
+}
+#outlet__wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--red-color);
+    margin: 0 -0.3rem;
+}
+.outlet__body-side {
+    display: flex;
+    width: 49.5%;
+    flex-direction: column;
+}
+.outlet__body-side__header {
+    display: flex;
+    justify-content: space-between;
+    height: 3.75rem;
+    align-items: center;
+    color: var(--white-color);
+    padding: 0 1.6rem;
+    width: 100%;
+}
+.outlet__body__see-more {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
+}
+.outlet__body__see-more:hover {
+    color: #fff;
+}
+.outlet__body-side__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.3rem;
+}
+.outlet-item {
+    width: calc(120rem / 6);
+    text-decoration: none;
+}
+.outlet-item:hover {
+    box-shadow: 0 0 0.8rem var(--text-color);
+    transition: box-shadow 0.2s linear;
+}
+.outlet__cost {
+    width: 100%;
+    text-align: center;
+    color: var(--red-color);
+    font-size: 1.6rem;
+    background-color: var(--white-color);
+}

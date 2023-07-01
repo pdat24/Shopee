@@ -1,20 +1,27 @@
 {
-  "name": "shopee",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "json-server --watch ./products_in_shopee.json",
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Pham Quoc Dat",
-  "license": "ISC",
-  "dependencies": {
-    "json-server": "^0.17.3"
-  },
-  "devDependencies": {
-    "webpack": "^5.82.1",
-    "webpack-cli": "^5.1.1"
-  }
+    "name": "shopee",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass -w src/public/scss/main.scss src/public/css/main.css",
+        "start": "nodemon src/app.js localhost 8080",
+        "build": "webpack watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Pham Quoc Dat",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "express-handlebars": "^7.0.7",
+        "mongodb": "^5.6.0"
+    },
+    "devDependencies": {
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.22",
+        "sass": "^1.63.6",
+        "webpack": "^5.82.1",
+        "webpack-cli": "^5.1.1"
+    }
 }

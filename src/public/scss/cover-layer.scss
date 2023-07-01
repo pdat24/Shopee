@@ -1,0 +1,35 @@
+/* Layer */
+#cover-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cover-layer__body {
+    height: auto;
+    position: relative;
+}
+#cover-layer__img {
+    display: block;
+    text-decoration: none;
+    @include bg-img(
+        "https://res.cloudinary.com/dh8bwlxbr/image/upload/v1688182252/Shopee%20Project/vn-50009109-e23215785f6000d442522b9683ca94ee_cqpmn3.png"
+    );
+    height: 52rem;
+    width: 42rem;
+}
+#cover-layer__close {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    padding: 0.6rem;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    z-index: 201;
+}

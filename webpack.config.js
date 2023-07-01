@@ -1,7 +1,10 @@
 module.exports = {
-    entry: "./assests/js/index.js",
-    output: {
-        filename: "bundle.js",
+    entry: {
+        homeScript: "./src/public/js/homeScript/index.js",
     },
-    mode: "production",
+    output: {
+        filename: "[name].js",
+        path: __dirname + "/src/public/js/dist",
+    },
+    mode: "development",
 };

@@ -1,15 +1,44 @@
 # Shopee web version on desktop
 
-## To start project: 
-### Open terminal in which the project cloned and run these commands:
+## To start project:
+
+### Open terminal in the project and run these commands:
+
+<br />
+
 ```
 npm i
 ```
-- Install packages that need to use *(make sure you installed nodejs)*.
+
+-   Install packages that the project depend on.
 
 ```
 npm start
 ```
-- Fake API *(make sure port 3000 is not using)*.
 
-***Finally, Open file index.html on vscode or any code editor that support liveserver to run project.***
+-   Start the project
+
+<br />
+
+**The project will run on http://localhost:8080. Let's try it!**
+
+_I used cloudinary to store photos and generated API by myself_
+
+---
+
+## API paths:
+
+---
+
+-   http://localhost:8080/API/sliderImages
+-   http://localhost:8080/API/sliderImages
+-   http://localhost:8080/API/proposedItems
+-   http://localhost:8080/API/categoryItems
+-   http://localhost:8080/API/flashSale
+-   http://localhost:8080/API/saleItems
+-   http://localhost:8080/API/trendingItems
+-   http://localhost:8080/API/suggestedItems
+-   http://localhost:8080/API/shopeeMallProductItems
+-   http://localhost:8080/API/footerCategory
+-   http://localhost:8080/API/footerSupport
+-   http://localhost:8080/API/footerKeywords
