@@ -28,7 +28,7 @@ _I used cloudinary to store photos and generated API by myself_
 
 ## API paths:
 
----
+<br />
 
 -   http://localhost:8080/API/sliderImages
 -   http://localhost:8080/API/sliderImages
