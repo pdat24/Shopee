@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const handlebars = require("express-handlebars");
 const logger = require("morgan");
@@ -6,6 +5,7 @@ const path = require("path");
 const router = require("./routers");
 
 const app = express();
+const PORT = 8080;
 
 app.engine(
     "hbs",
@@ -26,4 +26,4 @@ app.use(logger("dev"));
 router(app);
 
 // listener
-app.listen(Number(process.env.PORT));
+app.listen(PORT);
