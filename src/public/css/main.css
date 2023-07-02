@@ -59,6 +59,19 @@ body {
   padding: 0 0.2rem;
 }
 
+.divLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Layer */
 #cover-layer {
   position: fixed;
@@ -1576,17 +1589,8 @@ body {
   padding: 0 2rem;
 }
 
-.divLoader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 999999;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.product__main {
+  margin-top: 120px;
 }
 
 /*# sourceMappingURL=main.css.map */

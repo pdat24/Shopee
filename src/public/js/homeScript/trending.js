@@ -1,5 +1,5 @@
 import { BackwUnitPX, ForwUnitPX } from "./slide.js";
-import { fetchData, handleMoveSlideBtn } from "./base.js";
+import { fetchData, handleMoveSlideBtn } from "../common/base.js";
 
 async function renderTrendingItem(bodyWidth, col) {
     const container = document.getElementById("trending__wrapper");

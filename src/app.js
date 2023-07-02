@@ -18,6 +18,7 @@ app.set("views", path.join(__dirname, "views"));
 
 // static files
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/product", express.static(path.join(__dirname, "public")));
 
 // logger
 app.use(logger("dev"));

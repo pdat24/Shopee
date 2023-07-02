@@ -1,19 +1,2 @@
-@import "../fonts/fontawesome-free-6.4.0-web/css/all.min.css";
-@import "./base.scss";
-@import "./cover-layer.scss";
-@import "./header/header.scss";
-@import "./body/body.scss";
-@import "./footer.scss";
-
-.divLoader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999999;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import "homeStyle/index.scss";
+@import "productStyle/index.scss";

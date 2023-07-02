@@ -1,5 +1,5 @@
 import { BackwUnitPercent, ForwUnitPercent } from "./slide.js";
-import { fetchData, handleMoveSlideBtn } from "./base.js";
+import { fetchData, handleMoveSlideBtn } from "../common/base.js";
 
 async function renderShopeeMallItem() {
     const container = document.getElementById("shopee-mall__wrapper");

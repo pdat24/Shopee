@@ -1,4 +1,4 @@
-import { fetchData } from "./base.js";
+import { fetchData } from "../common/base.js";
 
 function renderSlider(name, target, indicator, items) {
     let size = 0;

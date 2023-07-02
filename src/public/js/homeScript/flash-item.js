@@ -1,5 +1,5 @@
 import { ForwUnitPX, BackwUnitPX } from "./slide.js";
-import { fetchData, handleMoveSlideBtn } from "./base.js";
+import { fetchData, handleMoveSlideBtn } from "../common/base.js";
 
 async function renderFlashSaleItem(bodyWidth, col) {
     const container = document.getElementById("flash-sale__wrapper");

@@ -1,4 +1,4 @@
-import { fetchData } from "./base.js";
+import { fetchData } from "../common/base.js";
 
 async function renderSuggestItem(col) {
     const container = document.getElementById("suggest__body");
@@ -12,7 +12,7 @@ async function renderSuggestItem(col) {
 
             const newMain = document.createElement("a");
             newMain.className = "suggest__item-container";
-            newMain.href = "#suggest__header";
+            newMain.href = `/product/${item._id}`;
 
             const newBody = document.createElement("div");
             newBody.className = "suggest__item-body";
@@ -42,11 +42,11 @@ async function renderSuggestItem(col) {
             <div class="suggest__item-sale">Giảm đ30k</div>
             <div class="suggest__item-footer-bot">
                 <span class="suggest__item-cost"
-                    ><span class="font-s13">đ</span>899.000</span
+                    ><span class="font-s13">đ</span>${item.price}</span
                 >
                 <span
                     class="suggest__item-sell text-capitalize text-muted"
-                    >đã bán 2.5k</span
+                    >đã bán ${item.sold}</span
                 >
             </div>
             `;
