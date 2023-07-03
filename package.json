@@ -4,10 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "sass": "sass -w src/public/scss/main.scss src/public/css/main.css",
-        "start": "nodemon src/app.js localhost 8080",
-        "build": "webpack watch",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "concurrently npm:dev:*",
+        "dev:webpack": "webpack watch",
+        "dev:sass": "sass -w src/public/scss/main.scss src/public/css/main.css",
+        "start": "nodemon src/app.js localhost 8080"
     },
     "author": "Pham Quoc Dat",
     "license": "ISC",
@@ -17,6 +17,7 @@
         "mongodb": "^5.6.0"
     },
     "devDependencies": {
+        "concurrently": "^8.2.0",
         "morgan": "^1.10.0",
         "nodemon": "^2.0.22",
         "sass": "^1.63.6",

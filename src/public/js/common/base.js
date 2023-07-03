@@ -1,7 +1,3 @@
-window.onload = () => {
-    document.getElementById("tempDiv").style.display = "none";
-};
-
 async function fetchData(src) {
     const response = await fetch(src);
     return response.json();

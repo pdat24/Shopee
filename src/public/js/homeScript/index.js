@@ -5,7 +5,9 @@ import "./flash-item.js";
 import "./shopee-mall.js";
 import "./trending.js";
 import "./suggest.js";
-import "../common/footer.js";
+import "../common/footerScript/footerKeywords";
+import "../common/footerScript/footerCategory";
+import "../common/footerScript";
 import "../common/headerScript.js";
 
 function renderSaleItems() {
