@@ -6,7 +6,7 @@ class ProductController {
         const _id = req.params.id;
         const data = await getCollection("suggestedItems");
         const product = await data.findOne({ _id: new ObjectId(_id) });
-        res.render("pages/productDetail", { product, layout: "productLayout" });
+        res.render("pages/productDetail", { product, layout: "productLayout", cssFile: "productStyle" });
     }
 }
 

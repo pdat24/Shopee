@@ -3,6 +3,7 @@ const handlebars = require("express-handlebars");
 const logger = require("morgan");
 const path = require("path");
 const router = require("./routers");
+const { repeatContext } = require("./views/helpers");
 
 const app = express();
 const PORT = 8080;
@@ -11,6 +12,9 @@ app.engine(
     "hbs",
     handlebars.create({
         extname: "hbs",
+        helpers: {
+            repeatContext,
+        },
     }).engine
 );
 app.set("view engine", "hbs");

@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "concurrently npm:dev:*",
         "dev:webpack": "webpack watch",
-        "dev:sass": "sass -w src/public/scss/main.scss src/public/css/main.css",
+        "dev:sass": "sass -w src/public/scss/productStyle/index.scss src/public/css/productStyle.css",
         "start": "nodemon src/app.js localhost 8080"
     },
     "author": "Pham Quoc Dat",

@@ -3,9 +3,8 @@ import { fetchData } from "./base";
 // show proposes on header
 async function handleProposes() {
     const searchBar = document.getElementById("search-bar");
-    const { data } = (await fetchData("http://localhost:8080/API/proposedItems")).filter(
-        (key) => key.name === "header_proposes"
-    )[0];
+    const response = await fetchData("http://localhost:8080/API/proposedItems");
+    const headerProposes = response.filter((key) => key.name === "header_proposes")[0];
     const proposeWrapper = document.getElementById("header__bottom-propose-wrapper");
     function handleClickOnProposes() {
         const searchBar = document.getElementById("search-bar");
@@ -16,11 +15,12 @@ async function handleProposes() {
             });
         }
     }
+    //
     const proposesList = document.createElement("ul");
     proposesList.id = "proposes";
     searchBar.oninput = (e) => {
         const htmlList = [];
-        for (const elem of data) {
+        for (const elem of headerProposes) {
             if (elem.startsWith(e.target.value.toLowerCase())) {
                 htmlList.push(`<li class="propose">${elem}</li>`);
                 if (htmlList.length >= 5) break;
@@ -34,16 +34,10 @@ async function handleProposes() {
         }
         proposeWrapper.append(proposesList);
     };
-    searchBar.onblur = () => {
-        setTimeout(() => proposeWrapper.removeChild(proposesList), 200);
-    };
-}
-
-// proposes're showed when focus on search bar
-function renderProposedShops() {
-    const container = document.getElementById("header__bottom-search-list");
-    fetchData("http://localhost:8080/API/proposedItems").then((res) => {
-        const { data } = res.filter((key) => key.name === "header_bottom_proposes")[0];
+    // proposes're showed when focus on search bar
+    (() => {
+        const container = document.getElementById("header__bottom-search-list");
+        const { data } = response.filter((key) => key.name === "header_bottom_proposes")[0];
         for (const shop of data) {
             const newShop = document.createElement("li");
             newShop.className = "header__bottom-search-link";
@@ -52,8 +46,10 @@ function renderProposedShops() {
                 `;
             container.append(newShop);
         }
-    });
+    })();
+    searchBar.onblur = () => {
+        setTimeout(() => proposeWrapper.removeChild(proposesList), 200);
+    };
 }
 
 handleProposes();
-renderProposedShops();

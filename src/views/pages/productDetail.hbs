@@ -1,50 +1,299 @@
-<div class="product__main">
+<div class="background">
     {{#with product}}
-    <div>
-        <div>
-            <div>
-                <img src="{{img}}" alt="">
-            </div>
-            <div>
-                <div></div>
-                <div></div>
+    <div class="wrapper">
+        <div class="path">
+            <a href="/">Shopee</a>
+            <i class="icon fa-solid fa-chevron-right"></i>
+            <span class="text-capitalize">{{desc}}</span>
+        </div>
+        <div class="productDiv">
+            <div class="productDiv__content">
+                <div>
+                    <div class="p-4">
+                        <div>
+                            <div class="productDiv__image-lg"
+                                style="background-image: url({{img}}); background-size: contain; background-repeat: no-repeat;">
+                            </div>
+                        </div>
+                        <div class="image-xs-wrapper">
+                            {{#repeatContext 5}}
+                            <div class="image-xs-div">
+                                <div class="image-xs"
+                                    style="background-image: url({{img}}); background-size: contain; background-repeat: no-repeat;">
+                                </div>
+                            </div>
+                            {{/repeatContext}}
+                        </div>
+                    </div>
+                    <div class="leftside__footer mb-4">
+                        <div class="share">
+                            <span class="me-1">Chia sẻ:</span>
+                            <i style="color: #3b5999;" class="cursor-pointer font-s22 fa-brands fa-facebook"></i>
+                            <i style="color: #0384ff;"
+                                class="cursor-pointer font-s22 fa-brands fa-facebook-messenger"></i>
+                            <i style="color: #de0217;" class="cursor-pointer font-s22 fa-brands fa-pinterest"></i>
+                            <i style="color: #10c2ff;" class="cursor-pointer font-s22 fa-brands fa-twitter"></i>
+                        </div>
+                        <div class="span"></div>
+                        <div class="share cursor-pointer">
+                            <i class="text-red font-s22 fa-regular fa-heart"></i>
+                            <span>Đã thích (19.4k)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightSide">
+                    <div>
+                        <div>
+                            <h2>{{desc}}</h2>
+                        </div>
+                        <div class="vote">
+                            <div class="vote_info d-flex">
+                                <div class="me-4 text-red">
+                                    <span class="font-s16 temp">{{rate}}</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="span"></div>
+                                <div class="me-4 ms-4">
+                                    <span class="font-s16 temp">179</span>
+                                    <span>Đánh Giá</span>
+                                </div>
+                                <div class="span"></div>
+                                <div class="me-4 ms-4">
+                                    <span class="font-s16">{{sold}}</span>
+                                    <span>Đã Bán</span>
+                                </div>
+                            </div>
+                            <div role="button">Tố cáo</div>
+                        </div>
+                    </div>
+                    <div class="price-div">
+                        <div>
+                            <div class="old-price">đ1.238.000</div>
+                            <div class="new-price">đ{{price}}</div>
+                            <div class="sale-label">50% Giảm</div>
+                        </div>
+                        <div>
+                            <div class="text-top">
+                                <span class="text-red">Gì Cũng Rẻ</span>
+                                <i class="fa-regular fa-circle-question"></i>
+                            </div>
+                            <div class="text-bottom">
+                                Giá tốt nhất so với các sản phẩm cùng loại trên Shopee!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infor-div">
+                        <div class="content-block">
+                            <div class="label">
+                                Mã Giảm Giá Của Shop
+                            </div>
+                            <div class="discount-div">
+                                <div class="discount-code">Giảm <span class="d">đ</span>2k</div>
+                                <div class="discount-code">Giảm <span class="d">đ</span>5k</div>
+                                <div class="discount-code">Giảm <span class="d">đ</span>10k</div>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <div class="label">Combo Khuyến Mãi</div>
+                            <div class="suggest-discount">Mua 2 & giảm 2%</div>
+                        </div>
+                        <div class="content-block">
+                            <div class="label">Vận Chuyển</div>
+                            <div class="d-flex flex-grow-1 align-items-center">
+                                <div>
+                                    <i class="font-s16 me-3 fa-solid fa-truck-fast"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="ship-info mb-2">
+                                        <div class="label">Vận Chuyển Tới</div>
+                                        <div class="font-s14 set-place">
+                                            Phường Tràng Tiền, Quận Hoàn Kiếm
+                                            <i class="fa-solid fa-chevron-down opacity-50"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ship-info">
+                                        <div class="label">Phí Vận Chuyển</div>
+                                        <div class="font-s14">
+                                            ₫14.175 - ₫22.000
+                                            <i class="fa-solid fa-chevron-down opacity-50"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-block mb-0">
+                            <div class="label">Màu</div>
+                            <div>
+                                <div class="product-variation">be</div>
+                                <div class="product-variation">trắng</div>
+                                <div class="product-variation">nâu</div>
+                                <div class="product-variation">Đen</div>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <div class="label">SIZE</div>
+                            <div>
+                                <div class="product-variation">M</div>
+                                <div class="product-variation">L</div>
+                                <div class="product-variation">S</div>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <div class="label">Số Lượng</div>
+                            <div class="d-flex align-items-center">
+                                <div class="amount-product-wrapper">
+                                    <div role="button" class="text-center flex-grow-1 amount-product pop-item">
+                                        <svg enable-background="new 0 0 10 10" width="10" viewBox="0 0 10 10" x="0"
+                                            y="0" class="shopee-svg-icon">
+                                            <polygon points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5">
+                                            </polygon>
+                                        </svg>
+                                    </div>
+                                    <div class="span"></div>
+                                    <div class="cursor-default text-center flex-grow-2 amount-number amount-product">1
+                                    </div>
+                                    <div class="span"></div>
+                                    <div role="button" class="text-center flex-grow-1 amount-product plus-item">
+                                        <i class="fa-regular fa-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="avaiable-product">1199 sản phẩm có sẵn</div>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <button class="add-to-cart-btn">
+                                <i class="cart-icon fa-solid fa-cart-plus"></i>
+                                <span>Thêm Vào Giỏ Hàng</span>
+                            </button>
+                            <button class="buy-btn">Mua Ngay</button>
+                        </div>
+                    </div>
+                    <div class="footer-wrapper">
+                        <div class="footer">
+                            <div>
+                                <img src="http://localhost:8080/product/imgs/83e10a1f95cb083579c089448ef8dd3b.png"
+                                    alt="photo" />
+                                <span>Shopee Đảm Bảo</span>
+                            </div>
+                            <div>3 Ngày Trả Hàng / Hoàn Tiền</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div>
-            <div>
-                <div>
-                    <h2>{{desc}}</h2>
-                </div>
-                <div>
-                    <div>
+        <div class="owner-wrapper">
+            <div class="owner">
+                <div class="d-flex me-5">
+                    <div class="avatar-div">
+                        <img src="http://localhost:8080/product/imgs/bf57d3458c16e0058015896c52e658fa_tn.png" alt="" />
                         <div>
-                            <span>{{rate}}</span>
-                        </div>
-                        <div>
-                            <span>179</span>
-                            <span>Đánh Giá</span>
-                        </div>
-                        <div>
-                            <span>{{sold}}</span>
-                            <span>Đã Bán</span>
+                            <div class="like-label">Yêu Thích</div>
                         </div>
                     </div>
                     <div>
-                        {{price}}
+                        <div>
+                            <div class="font-s16">truonggiahan0266</div>
+                            <div class="font-s14" style="color: rgba(0, 0, 0, 0.4);">Online 56 Phút Trước</div>
+                        </div>
+                        <div class="btn-div">
+                            <button class="add-to-cart-btn">
+                                <i class="icon fa-regular fa-comments"></i>
+                                <span>Chat Ngay</span>
+                            </button>
+                            <button class="see-shop">
+                                <i class="icon fa-solid fa-shop"></i>
+                                <span>Xem Shop</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="span"></div>
+                <div class="flex-grow-1 prop-wrapper">
+                    <div class="prop">
+                        <div class="prop-div">
+                            <div>Đánh Giá</div>
+                            <div class="text-red">18,2k</div>
+                        </div>
+                        <div class="prop-div">
+                            <div>Sản Phẩm</div>
+                            <div class="text-red">85</div>
+                        </div>
+                        <div class="prop-div">
+                            <div>Tỉ Lệ Phản Hồi</div>
+                            <div class="text-red">96%</div>
+                        </div>
+                        <div class="prop-div">
+                            <div>Thời Gian Phản Hồi</div>
+                            <div class="text-red">trong vài giờ</div>
+                        </div>
+                        <div class="prop-div">
+                            <div>Tham Gia</div>
+                            <div class="text-red">26 tháng trước</div>
+                        </div>
+                        <div class="prop-div">
+                            <div>Người Theo Dõi</div>
+                            <div class="text-red">48,6k</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <div></div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+        </div>
+    </div>
+    <div class="preview-img-layer">
+        <div class="preview-dialog">
+            <div class="left-dialog">
+                <div class="h-100" id="active-img"
+                    style="background-image: url({{img}}); background-size: cover; background-repeat: no-repeat;">
+                    <div class="position-relative h-100 w-100 d-flex">
+                        <div class="move-btn-div">
+                            <div role="button" class="backward-btn">
+                                <i class="icon fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div role="button" class="forward-btn">
+                                <i class="icon fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div></div>
+            <div class="right-dialog">
+                <div class="title">{{desc}}</div>
+                <div class="queuing-img-div">
+                    <img class="previewing-img queuing-imgs" src="{{img}}" alt="photo" />
+                    <img class="queuing-imgs" src="{{img}}" alt="photo" />
+                    <img class="queuing-imgs" src="{{img}}" alt="photo" />
+                    <img class="queuing-imgs" src="{{img}}" alt="photo" />
+                    <img class="queuing-imgs" src="{{img}}" alt="photo" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="place-layer">
+        <div class="place-dialog">
+            <div class="header">
+                <div>Địa chỉ nhận hàng</div>
+                <i class="close-get-place-model fa-solid fa-xmark"></i>
+            </div>
+            <div class="body">
+                <div>
+                    <div class="entry">
+                        <input type="text" placeholder="Tìm Thành Phố, Quận/Huyện" />
+                        <button>Sử dụng</button>
+                    </div>
+                    <div class="curr-place" role="button">
+                        <i class="me-2 fa-solid fa-location-dot"></i>
+                        <span>Sử dụng địa chỉ hiện tại</span>
+                    </div>
+                </div>
+                <div class="text">
+                    <div>Địa chỉ của tôi</div>
+                    <div><a href="#">Đăng nhập</a> chọn địa chỉ nhận hàng</div>
+                </div>
+            </div>
         </div>
     </div>
     {{/with}}
