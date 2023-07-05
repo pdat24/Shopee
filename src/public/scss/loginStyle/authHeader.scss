@@ -1,0 +1,39 @@
+@mixin center-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-wrapper {
+    @include center-all();
+    height: 84px;
+    background-color: #fff;
+    z-index: 999;
+    .header-content {
+        @include center-all();
+        width: 1200px;
+        font-size: 14px;
+        justify-content: space-between;
+    }
+    .left {
+        display: flex;
+        gap: 16px;
+        font-size: 24px;
+        align-items: center;
+        > a:first-child {
+            text-decoration: none;
+            color: var(--red-color);
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            .icon {
+                font-size: 32px;
+            }
+        }
+    }
+    .right {
+        color: var(--red-color);
+        text-decoration: none;
+        padding-right: 14px;
+    }
+}
