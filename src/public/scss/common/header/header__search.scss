@@ -19,17 +19,7 @@
     display: inline-block;
     line-height: 2rem;
     font-size: 1.4rem;
-    border-right: 1px solid #d5cdcd;
     flex: 1;
-}
-#header__bottom-search select {
-    @include search-bar();
-    display: inline-block;
-    background-color: inherit;
-    padding: 0 1.2rem;
-    font-size: $font-12;
-    cursor: pointer;
-    opacity: 0.6;
 }
 #header__bottom-propose-wrapper {
     position: relative;
@@ -83,6 +73,9 @@
     border: 0.2rem solid;
     padding: 1rem 2rem;
     cursor: pointer;
+    min-width: 86px;
+    display: inline-flex;
+    justify-content: center;
 }
 #header__bottom-search-icon:hover {
     color: rgb(241, 235, 235);

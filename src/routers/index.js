@@ -3,6 +3,7 @@ const APIs = require("./API");
 const productDetail = require("./productDetail");
 const login = require("./login");
 const signup = require("./signup");
+const cart = require("./cart");
 
 function router(app) {
     app.use("/", home);
@@ -10,6 +11,7 @@ function router(app) {
     app.use("/product", productDetail);
     app.use("/login", login);
     app.use("/signup", signup);
+    app.use("/cart", cart);
 }
 
 module.exports = router;

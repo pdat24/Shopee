@@ -1,0 +1,103 @@
+<div>
+    <div class="headerBottom">
+        <div class="headerBottom__main">
+            <div class="left-wrapper">
+                <div class="left align-self-end">
+                    <a href="/">
+                        <i class="icon fa-sharp fa-solid fa-bag-shopping"></i>
+                        <span>Shopee</span>
+                    </a>
+                </div>
+                <div class="span"></div>
+                <div class="align-self-start">Giỏ Hàng</div>
+            </div>
+            <div>
+                {{> searchBar}}
+            </div>
+        </div>
+    </div>
+    <div class="items-wrapper">
+        <div class="select-bar justify-content-between">
+            <div class="label">Sản Phẩm</div>
+            <div class="d-flex">
+                <div class="label">Đơn Giá</div>
+                <div class="label">Số Lượng</div>
+                <div class="label">Số Tiền</div>
+                <div class="label">Thao Tác</div>
+            </div>
+        </div>
+        <form action="/cart/delete" method="post">
+            {{#each products}}
+            <div class="items-div">
+                <div class="item w-100">
+                    <div class="main">
+                        <div class="left">
+                            <input class="checkbox item-checkbox" value="{{this._id}}" type="checkbox" name="items[]">
+                            <img class="item-img" src="{{this.img}}" />
+                            <div>
+                                <div class="desc">{{this.desc}}</div>
+                                <img style="width: 120px;margin-left: 10px;"
+                                    src="http://localhost:8080/cart/imgs/vn-50009109-3b974960a143e51de0d9e97dba91743b.png" />
+                            </div>
+                        </div>
+                        <div class="d-flex right align-items-center">
+                            <div class="label">đ{{this.price}}</div>
+                            <div class="label">
+                                {{>amountPtoduct}}
+                            </div>
+                            <div class="text-red label">
+                                đ<div class="item-price">{{this.price}}</div>
+                            </div>
+                            <a class="label del-btn text-red fs-3" href="/cart/delete/{{this._id}}">Xóa</a>
+                        </div>
+                    </div>
+                    <div class="voucher">
+                        <i class="icon fa-solid fa-ticket"></i>
+                        <a class="text-decoration-none" href="#">Thêm mã giảm giá của Shop</a>
+                    </div>
+                    <div class="transport">
+                        <i class="icon fa-sharp fa-solid fa-truck-fast"></i>
+                        <div>
+                            <span>
+                                Giảm ₫15.000 phí vận chuyển đơn tối thiểu ₫50.000; Giảm ₫25.000 phí vận chuyển đơn tối
+                                thiểu
+                                ₫99.000
+                            </span>
+                            <a href="#" class="text-decoration-none">Tìm hiểu thêm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            <div class="select-div">
+                <div class="top-right">
+                    <div class="voucher">
+                        <i class="icon fa-solid fa-ticket text-red"></i>
+                        <div>Thêm mã giảm giá của Shop</div>
+                    </div>
+                    <a class="text-decoration-none font-s14 d-flex align-items-center" href="#">Chọn Hoặc Nhập Mã</a>
+                </div>
+                <div class="bottom">
+                    <div class="bottom-left">
+                        <input type="checkbox" class="checkbox" name="all" id="selectall">
+                        <label class="custom-cursor-on-hover" for="selectall">Chọn Tất Cả (<span
+                                class="totalItem"></span>)</label>
+                        <button id="submitBtn" type="submit">Xóa</button>
+                    </div>
+                    <div class="bottom-right">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                Tổng thanh toán (<span class="selectedItems">0</span> Sản phẩm):
+                                &nbsp;
+                            </div>
+                            <div class="cost">
+                                ₫<span class="numItem">0</span>
+                            </div>
+                        </div>
+                        <button type="button" class="buy-btn">Mua Hàng</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

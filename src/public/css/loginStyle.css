@@ -36,7 +36,7 @@ body {
 }
 
 .text-red {
-  color: var(--red-color);
+  color: var(--red-color) !important;
 }
 
 .text-color {

@@ -1,4 +1,5 @@
-import "../common/headerScript";
+import axios from "axios";
+import { updateCart } from "../common/headerScript";
 import "../common/base";
 import "../common/footerScript";
 import "./togglePreviewImg";
@@ -18,5 +19,17 @@ import "./getPlaceModel";
             num--;
             amount.innerText = num;
         }
+    });
+})();
+
+(() => {
+    const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+    addToCartBtns.forEach((btn) => {
+        btn.onclick = async () => {
+            const _id = btn.getAttribute("id");
+            await axios.post("http://localhost:8080/cart", { _id });
+            await updateCart();
+            alert("Thêm vào giỏ hàng thành công");
+        };
     });
 })();

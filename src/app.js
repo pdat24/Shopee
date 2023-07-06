@@ -23,6 +23,10 @@ app.set("views", path.join(__dirname, "views"));
 // static files
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/product", express.static(path.join(__dirname, "public")));
+app.use("/cart", express.static(path.join(__dirname, "public")));
+
+//
+app.use(express.json());
 app.use(
     express.urlencoded({
         extended: true,

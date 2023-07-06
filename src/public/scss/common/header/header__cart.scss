@@ -11,14 +11,86 @@
 #cart__items {
     @include float-block-in-header();
     @include hide();
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     transform: translateX(-90%);
     width: 40rem;
-    height: 28rem;
     overflow: hidden;
     color: var(--black-color);
+    align-items: center;
+    min-height: 300px;
+    max-height: 400px;
+    .item-in-cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        flex-grow: 1;
+        .empty-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            padding-left: 10px;
+            height: 40px;
+            color: rgba(0, 0, 0, 0.26);
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+        }
+        .item {
+            display: flex;
+            width: 100%;
+            padding: 10px;
+            &:hover {
+                background-color: #f8f8f8;
+            }
+            .item-img {
+                width: 40px;
+                border: 1px solid rgba(0, 0, 0, 0.09);
+            }
+            .noti-body {
+                display: flex;
+                flex: 1;
+                margin-left: 12px;
+                .item-desc {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    text-transform: capitalize;
+                    flex: 1;
+                    color: #555;
+                }
+                .item-price {
+                    margin-left: 40px;
+                    color: var(--red-color);
+                }
+            }
+        }
+    }
+    .bottom {
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 10px;
+        .showCart {
+            color: #fff;
+            background-color: #ee4d2d;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.09);
+            border: none;
+            height: 34px;
+            font-size: 14px;
+            padding: 0 15px;
+            min-width: 60px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
 }
 #cart__items > p {
     font-size: $font-12;
@@ -29,6 +101,6 @@
     display: flex;
 }
 #cart__items img {
-    width: 50%;
     @include no-drag();
+    width: 50%;
 }

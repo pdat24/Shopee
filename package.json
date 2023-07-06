@@ -4,14 +4,19 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "concurrently npm:dev:*",
+        "dev": "concurrently npm:sass:cartPage npm:dev:webpack",
         "dev:webpack": "webpack watch",
-        "dev:sass": "sass -w src/public/scss/loginStyle/index.scss src/public/css/loginStyle.css",
-        "start": "nodemon src/app.js localhost 8080"
+        "sass:cartPage": "sass -w src/public/scss/cartStyle/index.scss src/public/css/cartStyle.css",
+        "sass:homePage": "sass -w src/public/scss/homeStyle/index.scss src/public/css/homeStyle.css",
+        "sass:productPage": "sass -w src/public/scss/productStyle/index.scss src/public/css/productStyle.css",
+        "sass:loginPage": "sass -w src/public/scss/loginStyle/index.scss src/public/css/loginStyle.css",
+        "start": "nodemon src/app.js localhost 8080",
+        "devSass": "concurrently npm:sass:*"
     },
     "author": "Pham Quoc Dat",
     "license": "ISC",
     "dependencies": {
+        "axios": "^1.4.0",
         "express": "^4.18.2",
         "express-handlebars": "^7.0.7",
         "mongodb": "^5.6.0"
