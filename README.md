@@ -24,7 +24,7 @@ npm start
 
 _I used cloudinary to store photos and generated API by myself_
 
-**Features**: signup, authentication, add/remove products from cart
+**Features**: signup, authentication, add/remove products in cart
 
 ---
 
