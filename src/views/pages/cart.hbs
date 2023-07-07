@@ -26,7 +26,8 @@
                 <div class="label">Thao Tác</div>
             </div>
         </div>
-        <form action="/cart/delete" method="post">
+        <form method="post" id="cartForm">
+            <div class="item-container"></div>
             {{#each products}}
             <div class="items-div">
                 <div class="item w-100">

@@ -4,14 +4,15 @@
             <div class="form-header">
                 <h2>Đăng ký</h2>
             </div>
-            <form class="form-body" action="#" method="POST">
+            <form class="form-body" id="signup-form" action="#" method="POST">
                 <div class="name-div">
-                    <input type="text" name="username" id="username" placeholder="Tên đăng nhập">
-                    <div class="log">Vui lòng điền vào mục này.</div>
+                    <input required minlength="6" autofocus type="text" name="username" id="username"
+                        placeholder="Tên đăng nhập">
+                    <div class="log">Tên người dùng chỉ bao gồm chữ, số hoặc _</div>
                 </div>
                 <div class="pass-div">
-                    <input type="password" name="password" id="password" placeholder="Mật khẩu">
-                    <div class="log">Mật khẩu không hợp lệ</div>
+                    <input required type="password" name="password" minlength="6" id="password" placeholder="Mật khẩu">
+                    <div class="log">Mật khẩu không thể chứa khoảng trắng</div>
                 </div>
                 <button type="submit">Đăng ký</button>
             </form>

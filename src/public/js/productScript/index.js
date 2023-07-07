@@ -23,13 +23,19 @@ import "./getPlaceModel";
 })();
 
 (() => {
-    const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
-    addToCartBtns.forEach((btn) => {
-        btn.onclick = async () => {
-            const _id = btn.getAttribute("id");
-            await axios.post("http://localhost:8080/cart", { _id });
+    const addToCartBtns = document.querySelector(".add-to-cart-btn");
+    const buyBtns = document.querySelector(".buy-btn");
+    buyBtns.addEventListener("click", () => {
+        const userId = localStorage.getItem("userId");
+        if (!userId) window.location.href = "/login";
+    });
+    addToCartBtns.onclick = async () => {
+        const _id = addToCartBtns.id;
+        const userId = localStorage.getItem("userId");
+        if (userId) {
+            await axios.post("http://localhost:8080/users/" + userId + "/cart", { itemId: _id, userId });
             await updateCart();
             alert("Thêm vào giỏ hàng thành công");
-        };
-    });
+        } else window.location.href = "/login";
+    };
 })();

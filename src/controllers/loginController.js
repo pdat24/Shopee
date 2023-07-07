@@ -6,9 +6,8 @@ class LoginController {
     }
     static async post(req, res) {
         const { username, password } = req.body;
-        const user = await (await getCollection("users")).findOne({ username: username });
-        console.log(user);
-        res.redirect("/");
+        const user = await (await getCollection("users")).findOne({ username, password });
+        res.send(user || null);
     }
 }
 

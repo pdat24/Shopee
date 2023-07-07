@@ -56,9 +56,13 @@ async function handleProposes() {
 async function updateCart() {
     try {
         const wrapperCart = document.querySelector(".item-in-cart");
-        const res = await axios.get("http://localhost:8080/API/cart");
-        document.querySelector(".itemInCart").innerText = res.data.length;
-        if (res.data.length) {
+        const userId = localStorage.getItem("userId");
+        if (userId) {
+            var res = await axios.get("http://localhost:8080/users/" + userId + "/cart");
+            document.querySelector(".showCart").href = `/cart`;
+        } else document.querySelector(".showCart").href = `/login`;
+        if (userId && res.data.length > 0) {
+            document.querySelector(".itemInCart").innerText = res.data.length;
             let items = "";
             let amount = 0;
             const elements = res.data.reverse();

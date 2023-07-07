@@ -928,7 +928,7 @@ body {
   opacity: 0.9;
 }
 
-.add-to-cart-btn {
+.add-to-cart-btn, .chatBtn {
   color: var(--red-color);
   border: 1px solid var(--red-color);
   height: 48px;
@@ -938,7 +938,7 @@ body {
   font-size: 1.6rem;
   padding: 0 20px;
 }
-.add-to-cart-btn:hover {
+.add-to-cart-btn:hover, .chatBtn:hover {
   background-color: rgba(255, 197, 178, 0.181);
 }
 

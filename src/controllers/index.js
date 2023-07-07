@@ -3,6 +3,7 @@ const APIController = require("./APIController");
 const productController = require("./productController");
 const loginController = require("./loginController");
 const signupController = require("./signupController");
+const usersController = require("./usersController");
 const cartController = require("./cartController");
 
 module.exports = {
@@ -11,5 +12,6 @@ module.exports = {
     productController,
     loginController,
     signupController,
+    usersController,
     cartController,
 };
