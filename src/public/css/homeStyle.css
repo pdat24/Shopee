@@ -231,6 +231,50 @@ body {
   width: 16%;
 }
 
+.profileWrapper {
+  position: relative;
+}
+.profileWrapper:hover .options {
+  display: block;
+}
+.profileWrapper .options {
+  display: none;
+  box-shadow: 0 0 1rem #a39999;
+  position: absolute;
+  background: #fff;
+  list-style-type: none;
+  min-width: 140px;
+  padding: 0;
+  border-radius: 2px;
+  font-size: 14px;
+  right: 0;
+}
+.profileWrapper .options .option {
+  padding: 8px 14px;
+}
+.profileWrapper .options .option:hover {
+  cursor: pointer;
+  color: var(--red-color);
+}
+.profileWrapper .profile-div {
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+.profileWrapper .profile-div .avatar {
+  width: 20.5px;
+  height: 20.5px;
+  margin-right: 4px;
+  border-radius: 50%;
+}
+.profileWrapper .profile-div .name:hover {
+  color: #eee;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #header__bottom-search-wrapper {
   display: flex;
   flex-direction: column;

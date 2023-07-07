@@ -12,12 +12,7 @@
 .header__top-list:last-child {
     align-items: end;
 }
-.header__top-link:not(
-    #header__top 
-    .header__top-list
-    :first-child 
-    .header__top-link
-    :last-child):hover a {
+.header__top-link:not(#header__top .header__top-list :first-child .header__top-link :last-child):hover a {
     opacity: 0.8;
 }
 .header__top-link {
@@ -62,7 +57,7 @@
     padding: 0.4rem 1.2rem;
     text-decoration: none;
     color: var(--text-color);
-    transition: background-color .1s linear;
+    transition: background-color 0.1s linear;
 }
 .header__top-notify-item:hover {
     background-color: #eeeeee;
@@ -88,4 +83,47 @@
 }
 #header__top-notify-img {
     width: 16%;
+}
+.profileWrapper {
+    position: relative;
+    &:hover .options {
+        display: block;
+    }
+    .options {
+        display: none;
+        box-shadow: 0 0 1rem #a39999;
+        position: absolute;
+        background: #fff;
+        list-style-type: none;
+        min-width: 140px;
+        padding: 0;
+        border-radius: 2px;
+        font-size: 14px;
+        right: 0;
+        .option {
+            padding: 8px 14px;
+            &:hover {
+                cursor: pointer;
+                color: var(--red-color);
+            }
+        }
+    }
+    .profile-div {
+        align-items: center;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        .avatar {
+            width: 20.5px;
+            height: 20.5px;
+            margin-right: 4px;
+            border-radius: 50%;
+        }
+        .name:hover {
+            color: #eee;
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
 }

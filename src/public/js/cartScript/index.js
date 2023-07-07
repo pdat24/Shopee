@@ -26,7 +26,21 @@ import "../common/footerScript";
                         <div class="d-flex right align-items-center">
                             <div class="label">đ${element.price}</div>
                             <div class="label">
-                                {{>amountPtoduct}}
+                                <div class="amount-product-wrapper">
+                                    <div role="button" class="text-center flex-grow-1 amount-product pop-item">
+                                        <svg enable-background="new 0 0 10 10" width="10" viewBox="0 0 10 10" x="0" y="0" class="shopee-svg-icon">
+                                            <polygon points="4.5 4.5 3.5 4.5 0 4.5 0 5.5 3.5 5.5 4.5 5.5 10 5.5 10 4.5">
+                                            </polygon>
+                                        </svg>
+                                    </div>
+                                    <div class="span"></div>
+                                    <div class="cursor-default text-center flex-grow-2 amount-number amount-product">1
+                                    </div>
+                                    <div class="span"></div>
+                                    <div role="button" class="text-center flex-grow-1 amount-product plus-item">
+                                        <i class="fa-regular fa-plus"></i>
+                                    </div>
+                                </div>
                             </div>
                             <div class="text-red label">
                                 đ<div class="item-price">${element.price}</div>

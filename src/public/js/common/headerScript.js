@@ -1,5 +1,5 @@
 import { fetchData } from "./base";
-import axios from "axios";
+import axios, { formToJSON } from "axios";
 
 // show proposes on header
 async function handleProposes() {
@@ -52,6 +52,60 @@ async function handleProposes() {
         setTimeout(() => proposeWrapper.removeChild(proposesList), 200);
     };
 }
+
+//login
+
+(async () => {
+    const headerBody = document.querySelector(".header-body");
+    const userId = localStorage.getItem("userId");
+    const profileWrapper = document.querySelector(".profileWrapper");
+    if (userId) {
+        const res = await axios.get("http://localhost:8080/users/" + userId);
+        document.querySelector(".become-buyer").style.display = "none";
+        headerBody.style.width = "1200px";
+        headerBody.style.margin = "auto";
+        profileWrapper.innerHTML = `
+        <div class="d-flex profile-div">
+            <img class="avatar" src="${
+                res.data.avatar || "http://localhost:8080/imgs/newavatar_1688714315851.jfif"
+            }" alt="avatar">
+            <div class="name">${res.data.username}</div>
+        </div>
+        <ul class="options">
+            <li>
+                <form class="uploadAvatarForm" action="/users/${userId}/uploadAvatar" method="POST" enctype="multipart/form-data">
+                    <label class="option d-block"  for="entryavatar">
+                        Chọn ảnh
+                        <input style="display: none;" type="file" name="newavatar" id="entryavatar">
+                    </label>
+                </form>
+            </li>
+            <li class="option logout-btn">Đăng xuất</li>
+        </ul>
+        `;
+    } else {
+        profileWrapper.classList.add("d-flex");
+        profileWrapper.innerHTML = `
+            <div class="header__top-link border-right">
+                <a href="/signup">Đăng ký</a>
+            </div>
+            <div class="header__top-link">
+                <a href="/login">Đăng nhập</a>
+            </div>
+        `;
+    }
+})().then(() => {
+    // logout
+    const logoutBtn = document.querySelector(".logout-btn");
+    const entry = document.getElementById("entryavatar");
+    entry?.addEventListener("change", (e) => {
+        document.querySelector(".uploadAvatarForm").submit();
+    });
+    logoutBtn?.addEventListener("click", () => {
+        localStorage.removeItem("userId");
+        window.location.href = "/";
+    });
+});
 
 async function updateCart() {
     try {

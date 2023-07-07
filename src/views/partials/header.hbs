@@ -1,24 +1,26 @@
 <!-- Header -->
 <header id="header">
-    {{> headerTop}}
-    <div id="header__bottom">
-        <a id="header__bottom-logo" href="/">
-            <i class="fa-sharp fa-solid fa-bag-shopping"></i><span>Shopee</span>
-        </a>
-        <div id="header__bottom-wrapper">
-            <div id="header__bottom-search-wrapper">
-                {{> searchBar}}
-                <div id="header__bottom-propose-wrapper">
-                    <ul id="header__bottom-search-list"></ul>
+    <div class="header-body">
+        {{> headerTop}}
+        <div id="header__bottom">
+            <a id="header__bottom-logo" href="/">
+                <i class="fa-sharp fa-solid fa-bag-shopping"></i><span>Shopee</span>
+            </a>
+            <div id="header__bottom-wrapper">
+                <div id="header__bottom-search-wrapper">
+                    {{> searchBar}}
+                    <div id="header__bottom-propose-wrapper">
+                        <ul id="header__bottom-search-list"></ul>
+                    </div>
                 </div>
-            </div>
-            <div id="header__bottom-icon">
-                <i class="fa-sharp fa-solid fa-cart-shopping" id="header__bottom-icon"></i>
-                <div id="cart__items">
-                    <div class="item-in-cart"></div>
-                    <div class="bottom">
-                        <div><span class="itemInCart">0</span> thêm vào giỏ hàng</div>
-                        <a class="showCart">Xem Giỏ Hàng</a>
+                <div id="header__bottom-icon">
+                    <i class="fa-sharp fa-solid fa-cart-shopping" id="header__bottom-icon"></i>
+                    <div id="cart__items">
+                        <div class="item-in-cart"></div>
+                        <div class="bottom">
+                            <div><span class="itemInCart">0</span> thêm vào giỏ hàng</div>
+                            <a class="showCart">Xem Giỏ Hàng</a>
+                        </div>
                     </div>
                 </div>
             </div>
